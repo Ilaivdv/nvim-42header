@@ -12,11 +12,11 @@ local M = {}
 
 ---@type header42.Config
 local default_config = {
-  username = function()
+  username = "ivan-der"
     return require("header42.git").username() or os.getenv("USER") or "unknown"
   end,
-  domain = "student.42.fr",
-  email = function(username, domain)
+  domain = "student.codam.nl",
+  -- email = 
     return require("header42.git").email() or os.getenv("MAIL") or username .. "@" .. domain
   end,
   autocmd = {
